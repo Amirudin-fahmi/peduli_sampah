@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PeduliSampah</title>
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Icon -->
+    <link rel="icon" href="images/Navbar/logo.png" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/index.css" />
+
+    <!-- Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,500;0,700;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="images/Navbar/logo.png" alt="logo" />
+          Peduli <span>Sampah</span>
+        </div>
+        <ul>
+          <li>
+            <a href="tentangGuest.html" onclick="changeActive(this)">Tentang</a>
+          </li>
+          <li><a href="#layanan" onclick="changeActive(this)">Service</a></li>
+          <li><a href="#kontak" onclick="changeActive(this)">Kontak</a></li>
+          <li>
+            <a href="blogGuest.html" onclick="changeActive(this)">Blog</a>
+          </li>
+        </ul>
+        <a href="login.html" class="btn btn-login" onclick="changeActive(this)"
+          >Login</a
+        >
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section id="hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1 class="hero-title">
+              Selamat Datang Jhon Lea di PeduliSampah, Tempat Inovasi dan
+              Merevolusi Kebersihan Lingkungan.
+            </h1>
+            <p class="hero-text">
+              Jaga kebersihan lingkungann sekitar Anda dengan mudah. Biarkan
+              kami mengelola jadwal penjemputan sampah Anda!
+            </p>
+            <div class="hero-btn">
+              <a href="tentangGuest.html" class="btn button-tentang">
+                Tentang ></a
+              >
+              <a href="" class="btn button-bergabung">
+                Bergabung ></a
+              >
+            </div>
+          </div>
+          <div class="col-md-6 hero-img">
+            <img src="images/LandingPage/aksen.png" alt="" class="img-aksen" />
+            <img src="images/LandingPage/hero.png" alt="" class="img-hero" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Hero -->
+    <!-- Mitra -->
+    <section id="partner">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-12">
+            <h1>Mitra Kami</h1>
+          </div>
+        </div>
+        <div class="row mitra">
+          <div class="col-md-2 mitra-logo">
+            <img src="images/Mitra/mitra1.png" title="mitra1" />
+          </div>
+          <div class="col-md-2 mitra-logo">
+            <img src="images/Mitra/mitra2.png" title="mitra2" />
+          </div>
+          <div class="col-md-2 mitra-logo">
+            <img src="images/Mitra/mitra3.png" title="mitra3" />
+          </div>
+          <div class="col-md-2 mitra-logo">
+            <img src="images/Mitra/mitra4.png" title="mitra4" />
+          </div>
+          <div class="col-md-2 mitra-logo">
+            <img src="images/Mitra/mitra5.png" title="mitra5" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-7 mitra-hero">
+            <img src="images/Mitra/mitra-hero.png" alt="" />
+          </div>
+          <div class="col-md-5 mitra-text">
+            <h1>Menjaga Lingkungan : Mengelola Sampah dengan Bijak</h1>
+            <p>
+              Kita dapat berkontribusi secara positif pada pelestarian
+              lingkungan dengan cara mengelola sampah secara bijak.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Mitra -->
+    <!-- Fitur -->
+    <section id="fitur">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Fitur Kami</h1>
+          </div>
+        </div>
+        <div class="row fitur-text">
+          <div class="col-md-4 fitur-kotak">
+            <div class="kotak">
+              <i class="bx bx-time"></i>
+            </div>
+            <h4>Jadwal Penjemputan Sampah</h4>
+            <p>
+              Mendapatkan jadwal pengambilan sampah dengan mudah dan efisien
+            </p>
+            <img src="images/fitur/fitur1.png" alt="" />
+          </div>
+          <div class="col-md-4 fitur-kotak">
+            <div class="kotak">
+              <i class="bx bxs-map"></i>
+            </div>
+            <h4>Tracking Posisi Petugas</h4>
+            <p>Melacak dan mengetahui posisi petugas penjemput sampah berada</p>
+            <img src="images/fitur/fitur2.png" alt="" />
+          </div>
+          <div class="col-md-4 fitur-kotak">
+            <div class="kotak">
+              <i class="bx bxs-tree"></i>
+            </div>
+            <h4>Cara mendaur ulang sampah</h4>
+            <p>Menyediakan tips daur ulang dan memilah sampah</p>
+            <img src="images/fitur/fitur3.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Fitur -->
+    <!-- Solusi -->
+    <section id="solusi">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Solusi Kami</h1>
+          </div>
+        </div>
+        <div class="row solusi-text">
+          <div class="col-md-6">
+            <h1>Mengubah Sampah Menjadi Barang yang Memiliki Nilai Ekonomis</h1>
+            <p>
+              Dengan teknologi dan inovasi yang tepat, banyak jenis sampah akan
+              dapat diproses kembali menjadi bahan baku yang digunakan dalam
+              industri manufaktur. Hal ini dapat membantu mengurangi limbah dan
+              polusi lingkungan.
+            </p>
+            <div class="sub-solusi">
+              <div class="kotak">
+                <i class="bx bx-list-ul"></i>
+              </div>
+              <div class="kotak-text">
+                <h4>Efisien</h4>
+                <p>
+                  Mengurangi limbah dengan perangkat lunak inovatif yang cepat
+                  dan efisien.
+                </p>
+              </div>
+              <div class="kotak">
+                <i class="bx bx-recycle"></i>
+              </div>
+              <div class="kotak-text">
+                <h4>Profit</h4>
+                <p>
+                  Meningkatkan keuntungan sambil memberikan dampak positif pada
+                  lingkungan.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 solusi-img">
+            <img
+              src="images/solusi/aksen-solusi.png"
+              alt=""
+              class="img-aksen-solusi"
+            />
+            <img
+              src="images/solusi/solusi-hero.png"
+              alt=""
+              class="img-solusi"
+            />
+          </div>
+          <a href="#" class="btn btn-solusi">Jelajahi Solusi Kami ></a>
+        </div>
+      </div>
+    </section>
+    <!-- End Solusi -->
+    <!-- Daur Ulang -->
+    <section id="daur-ulang">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Daur Ulang Sampah</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 daur-ulang-img">
+            <img
+              src="images/Daur Ulang/daurUlang1.png"
+              alt=""
+              class="img-daurlulang"
+            />
+          </div>
+          <div class="col-md-6 daur-ulang-text">
+            <h1>Kami Menyediakan Akses Daur Ulang</h1>
+            <p>
+              Daur ulang membantu membersihkan lingkungan dan membuat komunitas
+              lebih sehat dan nyaman untuk ditinggali.
+            </p>
+            <div class="kotak kotak-daurulang">
+              <span>1jtkg+</span>
+              <p>Sampah didaur ulang</p>
+            </div>
+            <div class="kotak kotak-daurulang">
+              <span>100+</span>
+              <p>Gudang sortir</p>
+            </div>
+            <div class="kotak kotak-daurulang">
+              <span>500+</span>
+              <p>Kolektor Lokal</p>
+            </div>
+            <div class="kotak kotak-daurulang">
+              <span>30rb+</span>
+              <p>Pengguna</p>
+            </div>
+            <a href="#" class="btn btn-daur-ulang">Jelajahi Daur Ulang ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Daur Ulang -->
+    <!-- Layanan -->
+    <section id="layanan">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 layanan-text">
+            <h1>Kenapa Harus di PeduliSampah?</h1>
+            <p>
+              Daur ulang membantu membersihkan lingkungan dan membuat komunitas
+              lebih sehat dan nyaman untuk ditinggali.
+            </p>
+          </div>
+          <div class="col-md-6 img-layanan">
+            <img src="images/layanan/layanan.jpg" alt="" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 sub-layanan">
+            <div class="kotak">
+              <i class="bx bxs-user"></i>
+            </div>
+            <h4>Petugas Profesional</h4>
+            <p>
+              Kami berdedikasi untuk memberikan pelayanan terbaik dan kepuasan
+              yang sangat tinggi.
+            </p>
+          </div>
+          <div class="col-md-3 sub-layanan">
+            <div class="kotak kotak-layanan">
+              <i class="bx bx-badge-check"></i>
+            </div>
+            <h4>Terverifikasi</h4>
+            <p>Kami menjamin keamanan dan keutuhan data yang kami miliki.</p>
+          </div>
+          <div class="col-md-3 sub-layanan">
+            <div class="kotak kotak-layanan">
+              <i class="bx bx-time"></i>
+            </div>
+            <h4>Tepat Waktu</h4>
+            <p>
+              Kami berkonsisten untuk tepat waktu dalam memberikan pelayanan.
+            </p>
+          </div>
+          <div class="col-md-3 sub-layanan">
+            <div class="kotak kotak-layanan">
+              <i class="bx bx-wrench"></i>
+            </div>
+            <h4>Alat Modern</h4>
+            <p>
+              Kami menggunakan alat moden dan terbukti memudahkan dalam proses
+              pelayanan.
+            </p>
+          </div>
+          <div class="col-md-3 sub-layanan">
+            <div class="kotak kotak-layanan">
+              <i class="bx bx-check-shield"></i>
+            </div>
+            <h4>Website Terpercaya</h4>
+            <p>
+              Kami memastikan bahwa setiap langkah kami dalam mengembangkan dan
+              memelihara website dilakukan dengan standar keamanan tertinggi.
+            </p>
+          </div>
+          <div class="col-md-3 sub-layanan">
+            <div class="kotak kotak-layanan">
+              <i class="bx bx-group"></i>
+            </div>
+            <h4>Tanggap Kepada Pelanggan</h4>
+            <p>
+              Kami selalu berupaya untuk memberikan pelayanan terbaik dan
+              kepuasan kepada pelanggan kami.
+            </p>
+          </div>
+          <div class="col-md-3 sub-layanan">
+            <div class="kotak kotak-layanan">
+              <i class="bx bx-donate-heart"></i>
+            </div>
+            <h4>Petugas yang Ramah</h4>
+            <p>Kami selalu memberikan pelayanan yang ramah dan responsif</p>
+          </div>
+          <div class="col-md-3 sub-layanan">
+            <div class="kotak kotak-layanan">
+              <i class="bx bx-user-voice"></i>
+            </div>
+            <h4>Mengutamakan Pelanggan</h4>
+            <p>
+              Kami selalu berupaya untuk mengutamakan pelayanan terbaik kepada
+              pelanggan kami.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Layanan -->
+
+    <!-- Kontak -->
+    <section id="kontak">
+      <div class="container">
+        <div class="row form-kontak">
+          <div class="col-md-4">
+            <img src="images/kontak/kontak.png" alt="" />
+          </div>
+          <div class="col-md-8">
+            <form action="">
+              <h1>Butuh bantuan? Kontak kami</h1>
+              <div class="form-group-nama">
+                <div class="form-nama">
+                  <input type="text" required="required" />
+                  <span> <i class="bx bxs-user"></i> Nama Depan</span>
+                </div>
+                <div class="form-nama">
+                  <input type="text" required="required" />
+                  <span> <i class="bx bxs-user"></i> Nama Belakang</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="email" required="required" />
+                <span><i class="bx bx-envelope"></i> Email</span>
+              </div>
+              <div class="form-group">
+                <input type="text" required="required" />
+                <span><i class="bx bx-phone"></i> Nomor Whatsapp</span>
+              </div>
+              <div class="form-group">
+                <textarea
+                  class="form-control"
+                  id="pesan"
+                  rows="3"
+                  required="required"
+                ></textarea>
+                <span>Masukkan Pesan anda disini</span>
+              </div>
+              <button type="submit" class="btn btn-kontak">Kirim Pesan</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Kontak -->
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row footer-wrapper">
+          <div class="col-md-12 footer-logo">
+            <img src="images/Navbar/logo.png" alt="" />
+            Peduli <span>Sampah</span>
+          </div>
+          <div class="row footer-menu">
+            <div class="col-md-4">
+              <h4>Pages</h4>
+              <ul>
+                <li><a href="#">Tentang Kami</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Kontak</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h4>Resource</h4>
+              <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Utility Page</a></li>
+                <li><a href="#">Term of use</a></li>
+                <li><a href="#">Licence</a></li>
+                <li><a href="#">Cookie Police</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h4>Sosial Media</h4>
+              <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Youtube</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="copyright">
+              <p>
+                Copyright &copy; 2022
+                <span>Peduli Sampah</span>. All Rights Reserved
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- End Footer -->
+    <!-- JS Bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- JS Icons -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <!-- JS Custom -->
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>

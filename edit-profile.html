@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tentang Peduli Sampah</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Icon -->
+    <link rel="icon" href="images/Navbar/logo.png" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/edit-profile.css" />
+
+    <!-- Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,500;0,700;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="images/Navbar/logo.png" alt="logo" />
+          Peduli <span>Sampah</span>
+        </div>
+        <ul>
+          <li>
+            <a href="tentang.html" onclick="changeActive(this)">Tentang</a>
+          </li>
+          <li><a href="#layanan" onclick="changeActive(this)">Service</a></li>
+          <li><a href="#kontak" onclick="changeActive(this)">Kontak</a></li>
+          <li><a href="blog.html" onclick="changeActive(this)">Blog</a></li>
+        </ul>
+
+        <div class="notification">
+          <i class="bx bx-bell" onclick="toggleMenuNotif()"></i>
+        </div>
+        <div class="sub-menu-notif">
+          <div class="sub-menu">
+            <div class="notif-info">
+              <div class="notif-list">
+                <div class="notif-item">
+                  <div class="notif-header">
+                    <img
+                      src="images/edit profile/profile.png"
+                      alt="Profil Pengirim"
+                    />
+                    <div class="notif-info">
+                      <h5>Penjemputan</h5>
+                      <p>Petugas akan datang segera mengambil sampahmu</p>
+                      <button class="btn btn-close notif-close"></button>
+                    </div>
+                  </div>
+                  <div class="notif-time">10 menit yang lalu</div>
+                </div>
+                <div class="notif-item">
+                  <div class="notif-header">
+                    <img
+                      src="images/edit profile/profile.png"
+                      alt="Profil Pengirim"
+                    />
+                    <div class="notif-info">
+                      <h5>Penjemputan</h5>
+                      <p>Petugas akan datang segera mengambil sampahmu</p>
+                      <button class="btn btn-close notif-close"></button>
+                    </div>
+                  </div>
+                  <div class="notif-time">10 menit yang lalu</div>
+                </div>
+                <div class="notif-item">
+                  <div class="notif-header">
+                    <img
+                      src="images/edit profile/profile.png"
+                      alt="Profil Pengirim"
+                    />
+                    <div class="notif-info">
+                      <h5>Penjemputan</h5>
+                      <p>Petugas akan datang segera mengambil sampahmu</p>
+                      <button class="btn btn-close notif-close"></button>
+                    </div>
+                  </div>
+                  <div class="notif-time">10 menit yang lalu</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="images/Navbar/user.png"
+          class="user-pic"
+          alt=""
+          onclick="toggleMenu()"
+        />
+        <div class="sub-menu-wrap">
+          <div class="sub-menu">
+            <div class="user-info">
+              <img src="images/Navbar/user.png" alt="" />
+              <h3>John Lee</h3>
+            </div>
+            <hr />
+            <a href="#" class="sub-menu-link">
+              <img src="images/Navbar/profile.png" alt="" />
+              <p>Edit Profile</p>
+              <span>></span>
+            </a>
+            <a href="#" class="sub-menu-link">
+              <img src="images/Navbar/setting.png" alt="" />
+              <p>Settings</p>
+              <span>></span>
+            </a>
+            <a href="#" class="sub-menu-link">
+              <img src="images/Navbar/help.png" alt="" />
+              <p>bantuan & Support</p>
+              <span>></span>
+            </a>
+            <a href="#" class="sub-menu-link" onclick="logout()">
+              <img src="images/Navbar/logout.png" alt="" />
+              <p>Logout</p>
+              <span>></span>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- End Header -->
+
+    <!-- Logout -->
+    <div id="confirmDialog" class="confirm-dialog">
+      <h4>Apakah Anda yakin ingin keluar?</h4>
+      <p>keluar akan kembali ke halaman biasa, jika mau kembali  harus  masuk lagi</p>
+      <div class="confirm-buttons">
+        <button id="confirmButton" class="confirm">Keluar</button>
+        <button id="cancelButton" class="cancel">Kembali</button>
+      </div>
+    </div>
+
+    <!-- End Logout -->
+    <!-- Profile -->
+    <section id="profile">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <img
+              src="images/edit profile/bg-profile.png"
+              class="bg-img"
+              alt=""
+            />
+            <img
+              src="images/edit profile/profile.png"
+              class="img-profile"
+              alt=""
+            />
+            <a href=""><i class="fa fa-pencil edit"></i></a>
+            <h3>John Lee</h3>
+            <a href="" class="btn btn-edit">Simpan</a>
+          </div>
+        </div>
+
+        <div class="row form-profile-kiri">
+          <div class="col-md-6 col-lg-6 col-sm-12">
+            <div class="form-group">
+              <label for="username">Nama Lengkap</label>
+              <input
+                type="text"
+                class="form-control"
+                id="username"
+                value="Jhon Lee"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                value="jhonlee123@gmail.com"
+              />
+            </div>
+            <div class="form-group">
+              <label for="noWhatsapp">Nomor Whatsapp</label>
+              <input
+                type="text"
+                class="form-control"
+                id="noWhatsapp"
+                value="08123456789"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="keluarahanDesa">Keluarahan/Desa</label>
+              <input
+                type="text"
+                class="form-control"
+                id="keluarahanDesa"
+                value="Karangasem"
+              />
+            </div>
+            <div class="form-group">
+              <label for="noRumah">Nomor Rumah</label>
+              <input type="text" class="form-control" id="noRumah" value="12" />
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-12 form-profile-kanan">
+            <div class="form-group">
+              <label for="tanggalLahir">Tanggal Lahir</label>
+              <input
+                type="date"
+                class="form-control"
+                id="tanggalLahir"
+                value="2000-09-09"
+              />
+            </div>
+            <div class="form-group">
+              <label for="hariPenjemputan">Hari Penjemputan</label>
+              <select class="form-control" id="hariPenjemputan">
+                <option value="senin">Senin</option>
+                <option value="selasa">Selasa</option>
+                <option value="rabu">Rabu</option>
+                <option value="kamis">Kamis</option>
+                <option value="jumat">Jumat</option>
+                <option value="sabtu">Sabtu</option>
+                <option value="minggu">Minggu</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="gangRusun">Gang Rusun</label>
+              <input
+                type="text"
+                class="form-control"
+                id="gangRusun"
+                value="Gang Cendrawasih"
+              />
+            </div>
+            <div class="form-group">
+              <label for="rtRw">Rt/Rw</label>
+              <input type="text" class="form-control" id="rtRw" value="10/4" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Profile -->
+    <footer>
+      <div class="container">
+        <div class="row footer-wrapper">
+          <div class="col-md-12 footer-logo">
+            <img src="images/Navbar/logo.png" alt="" />
+            Peduli <span>Sampah</span>
+          </div>
+          <div class="row footer-menu">
+            <div class="col-md-4">
+              <h4>Pages</h4>
+              <ul>
+                <li><a href="tentang.html">Tentang Kami</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Kontak</a></li>
+                <li><a href="blog.html">Blog</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h4>Resource</h4>
+              <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Utility Page</a></li>
+                <li><a href="#">Term of use</a></li>
+                <li><a href="#">Licence</a></li>
+                <li><a href="#">Cookie Police</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h4>Sosial Media</h4>
+              <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Youtube</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="copyright">
+              <p>
+                Copyright &copy; 2022
+                <span>Peduli Sampah</span>. All Rights Reserved
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- JS Bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- JS Icons -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <!-- JS Custom -->
+    <script src="assets/js/edit-profile.js"></script>
+  </body>
+</html>

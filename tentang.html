@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tentang Peduli Sampah</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Icon -->
+    <link rel="icon" href="images/Navbar/logo.png" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/tentang.css" />
+
+    <!-- Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,500;0,700;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="images/Navbar/logo.png" alt="logo" />
+          Peduli <span>Sampah</span>
+        </div>
+        <ul>
+          <li>
+            <a href="tentang.html" onclick="changeActive(this)">Tentang</a>
+          </li>
+          <li><a href="#layanan" onclick="changeActive(this)">Service</a></li>
+          <li><a href="#kontak" onclick="changeActive(this)">Kontak</a></li>
+          <li><a href="blog.html" onclick="changeActive(this)">Blog</a></li>
+        </ul>
+        <div class="notification">
+          <i class="bx bx-bell" onclick="toggleMenuNotif()"></i>
+        </div>
+        <div class="sub-menu-notif">
+          <div class="sub-menu">
+            <div class="notif-info">
+              <div class="notif-list">
+                <div class="notif-item">
+                  <div class="notif-header">
+                    <img
+                      src="images/edit profile/profile.png"
+                      alt="Profil Pengirim"
+                    />
+                    <div class="notif-info">
+                      <h5>Penjemputan</h5>
+                      <p>Petugas akan datang segera mengambil sampahmu</p>
+                      <button class="btn btn-close notif-close"></button>
+                    </div>
+                  </div>
+                  <div class="notif-time">10 menit yang lalu</div>
+                </div>
+                <div class="notif-item">
+                  <div class="notif-header">
+                    <img
+                      src="images/edit profile/profile.png"
+                      alt="Profil Pengirim"
+                    />
+                    <div class="notif-info">
+                      <h5>Penjemputan</h5>
+                      <p>Petugas akan datang segera mengambil sampahmu</p>
+                      <button class="btn btn-close notif-close"></button>
+                    </div>
+                  </div>
+                  <div class="notif-time">10 menit yang lalu</div>
+                </div>
+                <div class="notif-item">
+                  <div class="notif-header">
+                    <img
+                      src="images/edit profile/profile.png"
+                      alt="Profil Pengirim"
+                    />
+                    <div class="notif-info">
+                      <h5>Penjemputan</h5>
+                      <p>Petugas akan datang segera mengambil sampahmu</p>
+                      <button class="btn btn-close notif-close"></button>
+                    </div>
+                  </div>
+                  <div class="notif-time">10 menit yang lalu</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="images/Navbar/user.png"
+          class="user-pic"
+          alt=""
+          onclick="toggleMenu()"
+        />
+        <div class="sub-menu-wrap">
+          <div class="sub-menu">
+            <div class="user-info">
+              <img src="images/Navbar/user.png" alt="" />
+              <h3>John Doe</h3>
+            </div>
+            <hr />
+            <a href="edit-profile.html" class="sub-menu-link">
+              <img src="images/Navbar/profile.png" alt="" />
+              <p>Edit Profile</p>
+              <span>></span>
+            </a>
+            <a href="#" class="sub-menu-link">
+              <img src="images/Navbar/setting.png" alt="" />
+              <p>Settings</p>
+              <span>></span>
+            </a>
+            <a href="#" class="sub-menu-link">
+              <img src="images/Navbar/help.png" alt="" />
+              <p>bantuan & Support</p>
+              <span>></span>
+            </a>
+            <a href="#" class="sub-menu-link" onclick="logout()">
+              <img src="images/Navbar/logout.png" alt="" />
+              <p>Logout</p>
+              <span>></span>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Logout -->
+    <div id="confirmDialog" class="confirm-dialog">
+      <h4>Apakah Anda yakin ingin keluar?</h4>
+      <p>
+        keluar akan kembali ke halaman biasa, jika mau kembali harus masuk lagi
+      </p>
+      <div class="confirm-buttons">
+        <button id="confirmButton" class="confirm">Keluar</button>
+        <button id="cancelButton" class="cancel">Kembali</button>
+      </div>
+    </div>
+
+    <!-- End Logout -->
+    <!-- Hero -->
+    <section id="hero">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12 hero-title">
+            <h1>Tentang</h1>
+            <p>Peduli<span>Sampah</span></p>
+            <img src="images/Tentang/hero/hero.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Hero -->
+    <!-- content -->
+    <section id="content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 content-text">
+            <h1>
+              Merubah Pandangan tentang Pengelolaan Sampah Menuju Masa Depan
+              yang Lebih Bersih dan Lebih Hijau
+            </h1>
+            <p>
+              Di PeduliSampah, kami mengangkat semangat inovasi dan kesadaran
+              lingkungan untuk menciptakan solusi terkini dalam pengelolaan
+              sampah. Kami memahami betapa pentingnya menjaga lingkungan tetap
+              bersih dan sehat, itulah mengapa kami hadir untuk memberikan
+              dukungan penuh dalam upaya Anda.
+            </p>
+          </div>
+          <div class="col-md-6 content-img">
+            <img
+              src="images/Tentang/content/gambar1.png"
+              class="img-content"
+              alt=""
+            />
+            <div class="sub-img">
+              <img
+                src="images/Tentang/content/gambar2.png"
+                class="img1"
+                alt=""
+              />
+              <img
+                src="images/Tentang/content/gambar3.png"
+                class="img2"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End content -->
+
+    <!-- Record -->
+    <section id="record">
+      <div class="container">
+        <div class="row">
+          <div class="kotak">
+            <span class="text-center">250+</span>
+            <p>Pelanggan</p>
+          </div>
+          <div class="kotak">
+            <span class="text-center">20+</span>
+            <p>Titik Penjemputan</p>
+          </div>
+          <div class="kotak">
+            <span class="text-center">5+</span>
+            <p>Rt/Rw</p>
+          </div>
+          <div class="kotak">
+            <span class="text-center">200+</span>
+            <p>Sampah</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 visi">
+            <h1>Visi</h1>
+            <p>
+              "Menuju Masa Depan yang Lebih Bersih dan Lebih Hijau melalui
+              Inovasi Berkelanjutan dan Kesadaran Lingkungan"
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 misi">
+            <h1>Misi</h1>
+            <p>
+              "PeduliSampah bukan hanya tentang pengelolaan sampah, tetapi juga
+              tentang membentuk kebiasaan yang berkelanjutan dan menciptakan
+              masa depan yang lebih baik bagi generasi mendatang. Kami percaya
+              bahwa dengan kolaborasi dan kesadaran, kita dapat menciptakan
+              perubahan yang berkelanjutan untuk lingkungan kita"
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Record -->
+
+    <!-- Testimonial -->
+    <section id="testi">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Testimoni Pelanggan</h1>
+            <div class="review">
+              <img src="images/Tentang/Testimoni/review1.jpg" alt="" />
+              <img src="images/Tentang/Testimoni/review2.jpg" alt="" />
+              <img src="images/Tentang/Testimoni/review3.jpg" alt="" />
+              <p>
+                Website ini memberikan dampak yang positif bagi kustomer,
+                operasional, dan mereka senang
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card-testi">
+              <div class="kotak-testi">
+                <div class="bintang">
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                </div>
+                <p>
+                  "Menuju Masa Depan yang Lebih Bersih dan Lebih Hijau melalui
+                  Inovasi Berkelanjutan dan Kesadaran Lingkungan"
+                </p>
+                <h4>Jhon lee</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card-testi">
+              <div class="kotak-testi">
+                <div class="bintang">
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                </div>
+                <p>
+                  "Website ini menyajikan informasi mengenai program penjemputan
+                  sampah dan inisiatif go green yang memberikan panduan praktis
+                  untuk memulai gaya hidup yang ramah lingkungan."
+                </p>
+                <h4>Samuel</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card-testi">
+              <div class="kotak-testi">
+                <div class="bintang">
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                </div>
+                <p>
+                  "Website ini memberikan gambaran yang komprehensif tentang
+                  layanan penjemputan sampah yang bertujuan untuk mendukung
+                  keberlanjutan lingkungan dan mengedukasi masyarakat tentang
+                  pentingnya menjaga bumi kita."
+                </p>
+                <h4>Lauren</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card-testi">
+              <div class="kotak-testi">
+                <div class="bintang">
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                </div>
+                <p>
+                  "website ini membahas layanan penjemputan sampah dan inisiatif
+                  go green secara menyeluruh memberikan wawasan yang berharga
+                  tentang upaya untuk menjaga lingkungan."
+                </p>
+                <h4>Morant</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Testimonial -->
+
+    <!-- Penawaran -->
+    <section id="penawaran">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Penawaran Terbaik Kami</h1>
+          </div>
+          <div class="col-md-4">
+            <div class="card-penawaran">
+              <div class="kotak-penawaran">
+                <img
+                  src="images/Tentang/Penawaran/kite.png"
+                  class="kite"
+                  alt=""
+                />
+                <h5>Reguler</h5>
+                <h2>Rp50.000,-</h2>
+                <span>per bulan</span>
+                <p>Dapat point tiap Minggu</p>
+                <a href="#" class="btn btn-penawaran">Berlangganan</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-penawaran-rekomendasi">
+              <div class="kotak-penawaran-rekomendasi">
+                <img
+                  src="images/Tentang/Penawaran/roket.png"
+                  class="kite"
+                  alt=""
+                />
+                <div class="kotak-rekomendasi">
+                  <span>Rekomendasi</span>
+                </div>
+                <h5>Sedang</h5>
+                <h2>Rp150.000,-</h2>
+                <span>per 3 bulan</span>
+                <p>Dapat point tiap 1 Bulan</p>
+                <a href="#" class="btn btn-penawaran-rekomendasi"
+                  >Berlangganan</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-penawaran">
+              <div class="kotak-penawaran">
+                <img
+                  src="images/Tentang/Penawaran/heli.png"
+                  class="kite"
+                  alt=""
+                />
+                <h5>Besar</h5>
+                <h2>Rp300.000,-</h2>
+                <span>per 6 bulan</span>
+                <p>Dapat point tiap 3 Bulan</p>
+                <a href="#" class="btn btn-penawaran">Berlangganan</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Penawaran -->
+
+    <!-- Footer -->
+
+    <footer>
+      <div class="container">
+        <div class="row footer-wrapper">
+          <div class="col-md-12 footer-logo">
+            <img src="images/Navbar/logo.png" alt="" />
+            Peduli <span>Sampah</span>
+          </div>
+          <div class="row footer-menu">
+            <div class="col-md-4">
+              <h4>Pages</h4>
+              <ul>
+                <li><a href="tentang.html">Tentang Kami</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Kontak</a></li>
+                <li><a href="blog.html">Blog</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h4>Resource</h4>
+              <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Utility Page</a></li>
+                <li><a href="#">Term of use</a></li>
+                <li><a href="#">Licence</a></li>
+                <li><a href="#">Cookie Police</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h4>Sosial Media</h4>
+              <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Youtube</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="copyright">
+              <p>
+                Copyright &copy; 2022
+                <span>Peduli Sampah</span>. All Rights Reserved
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- JS Bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- JS Icons -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <!-- JS Custom -->
+    <script src="assets/js/tentang.js"></script>
+  </body>
+</html>
